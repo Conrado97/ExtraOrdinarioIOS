@@ -6,7 +6,12 @@ target 'IOSExtraordinario' do
   use_frameworks!
 
   # Pods for IOSExtraordinario
-	pod 'Firebase/Core'
+	
+ pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 
   target 'IOSExtraordinarioTests' do
     inherit! :search_paths
