@@ -18,6 +18,10 @@
 		44D5D02720E4EE8300088B03 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D02620E4EE8300088B03 /* DataHolder.swift */; };
 		44D5D02920E4F1F400088B03 /* Registrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D02820E4F1F400088B03 /* Registrar.swift */; };
 		44D5D02B20E4F40F00088B03 /* COSAS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D02A20E4F40F00088B03 /* COSAS.swift */; };
+		44D5D02F20E4FC3B00088B03 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D02E20E4FC3B00088B03 /* Perfil.swift */; };
+		44D5D03120E4FD3600088B03 /* tablecontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D03020E4FD3600088B03 /* tablecontroler.swift */; };
+		44D5D03720E502AA00088B03 /* LaTabla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D03620E502AA00088B03 /* LaTabla.swift */; };
+		44D5D03920E504C500088B03 /* SOYELMAPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D5D03820E504C500088B03 /* SOYELMAPA.swift */; };
 		48AF839AFC6BC8C173334BAA /* Pods_IOSExtraordinarioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD0CFD093CC17FDA1958C66 /* Pods_IOSExtraordinarioTests.framework */; };
 		8FB049F54EFCB3F8E1335243 /* Pods_IOSExtraordinarioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370A518DE0DD0FE44F6B6A45 /* Pods_IOSExtraordinarioUITests.framework */; };
 		FDE0D6C4964CECCE05044A8D /* Pods_IOSExtraordinario.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42C517EAC9B17B009E4672B /* Pods_IOSExtraordinario.framework */; };
@@ -60,6 +64,10 @@
 		44D5D02620E4EE8300088B03 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		44D5D02820E4F1F400088B03 /* Registrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrar.swift; sourceTree = "<group>"; };
 		44D5D02A20E4F40F00088B03 /* COSAS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COSAS.swift; sourceTree = "<group>"; };
+		44D5D02E20E4FC3B00088B03 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		44D5D03020E4FD3600088B03 /* tablecontroler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tablecontroler.swift; sourceTree = "<group>"; };
+		44D5D03620E502AA00088B03 /* LaTabla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaTabla.swift; sourceTree = "<group>"; };
+		44D5D03820E504C500088B03 /* SOYELMAPA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOYELMAPA.swift; sourceTree = "<group>"; };
 		4DA910C26A2CE719C7DA91A5 /* Pods-IOSExtraordinarioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSExtraordinarioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSExtraordinarioUITests/Pods-IOSExtraordinarioUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC9DB7C1DC9DCD433D518C4 /* Pods-IOSExtraordinario.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSExtraordinario.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSExtraordinario/Pods-IOSExtraordinario.release.xcconfig"; sourceTree = "<group>"; };
 		BDC944D06FAA2F077947C58B /* Pods-IOSExtraordinarioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSExtraordinarioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSExtraordinarioTests/Pods-IOSExtraordinarioTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 				44D5D02620E4EE8300088B03 /* DataHolder.swift */,
 				44D5D02820E4F1F400088B03 /* Registrar.swift */,
 				44D5D02A20E4F40F00088B03 /* COSAS.swift */,
+				44D5D02E20E4FC3B00088B03 /* Perfil.swift */,
+				44D5D03020E4FD3600088B03 /* tablecontroler.swift */,
+				44D5D03620E502AA00088B03 /* LaTabla.swift */,
+				44D5D03820E504C500088B03 /* SOYELMAPA.swift */,
 			);
 			path = IOSExtraordinario;
 			sourceTree = "<group>";
@@ -450,14 +462,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IOSExtraordinario/Pods-IOSExtraordinario-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +499,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D5CFF920E4D38400088B03 /* ViewController.swift in Sources */,
+				44D5D03720E502AA00088B03 /* LaTabla.swift in Sources */,
 				44D5D02920E4F1F400088B03 /* Registrar.swift in Sources */,
 				44D5D02720E4EE8300088B03 /* DataHolder.swift in Sources */,
+				44D5D02F20E4FC3B00088B03 /* Perfil.swift in Sources */,
+				44D5D03120E4FD3600088B03 /* tablecontroler.swift in Sources */,
+				44D5D03920E504C500088B03 /* SOYELMAPA.swift in Sources */,
 				44D5D02B20E4F40F00088B03 /* COSAS.swift in Sources */,
 				44D5CFF720E4D38400088B03 /* AppDelegate.swift in Sources */,
 			);

@@ -12,12 +12,12 @@ import Firebase
 class Registro: UIViewController, DataHolderDelegate {
     
     @IBOutlet var User: UITextField?
-    @IBOutlet var Email: UITextField?
-    @IBOutlet var Password: UITextField?
-    @IBOutlet var RePassword: UITextField?
+    @IBOutlet var EMail: UITextField?
+    @IBOutlet var Contraseña: UITextField?
+  
     
-    @IBOutlet var Salir: UIButton?
-    @IBOutlet var Aceptar: UIButton?
+    @IBOutlet var Cancelar: UIButton?
+    @IBOutlet var Continuar: UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
         EMail?.text = DataHolder.sharedInstance.email
@@ -41,7 +41,7 @@ class Registro: UIViewController, DataHolderDelegate {
       
         
         
-        DataHolder.sharedInstance.Registro(delegate: self, sEmail: (Email?.text)!, sPass: (Password?.text)!)
+        DataHolder.sharedInstance.Registro(delegate: self, sEmail: (EMail?.text)!, sPass: (Contraseña?.text)!)
     }
     /*
      // MARK: - Navigation
@@ -54,7 +54,7 @@ class Registro: UIViewController, DataHolderDelegate {
      */
     func dataHolderRegister(blfin: Bool) {
         if blfin==true{
-            self.performSegue(withIdentifier: "registrado", sender: self)
+            self.performSegue(withIdentifier: "te has registrado", sender: self)
         }
     }
 }

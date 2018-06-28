@@ -10,10 +10,6 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-import UIKit
-import Firebase
-import FirebaseStorage
-
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     
@@ -28,7 +24,7 @@ class DataHolder: NSObject {
     var repass:String = ""
     
     var HMIMG :[String: UIImage]?=[:]
-    var arColumnas:[COSAS] = []
+    var arColumnas:[Cosas] = []
     
     
     func initFirebase(){
@@ -41,11 +37,9 @@ class DataHolder: NSObject {
     func Registro(delegate:DataHolderDelegate,sEmail:String, sPass:String) {
         Auth.auth().createUser(withEmail: email, password: pass){
             (email, error)in
-            if self.pass != self.repass{
-                print("Las contraseñas no son iguales")
-            }
-            else if self.email != "" && self.user != ""{
-                print ("Te has registrado ")
+            
+           if self.email != "" && self.user != ""{
+                print ("te has registrado")
                 print(self.email)
                 print(self.user)
                 DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
@@ -61,7 +55,7 @@ class DataHolder: NSObject {
     
     var sID:String = ""
     func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
-        print("Bienvenido" + sEmail)
+        print("Hola " + sEmail)
         
         Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
             if sEmail != ""{
@@ -82,7 +76,7 @@ class DataHolder: NSObject {
                 }
             }
             else{
-                print("Error inicio sesion")
+                print("error de sesion")
                 delegate.dataHolderLogin!(blfin: false)
             }
         }
@@ -109,26 +103,26 @@ class DataHolder: NSObject {
         else{
             delegate.imagen!(imagen:self.HMIMG![clave]!)
         }
-        print("Imagen lista")
+        print("imagen lista")
     }
     
-    func descargarCOSAS(delegate:DataHolderDelegate){
+    func descargarCapuchas(delegate:DataHolderDelegate){
         
-        DataHolder.sharedInstance.fireStoreDB?.collection("COSAS").getDocuments() { (querySnapshot, err) in
+        DataHolder.sharedInstance.fireStoreDB?.collection("Cosas").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                delegate.DHDDescargaCOSAS!(blnFin: false)
+                delegate.DHDDescargaCosa!(blnFin: false)
             } else {
                 self.arColumnas=[]
                 for document in querySnapshot!.documents {
-                    let cosa:COSAS = COSAS()
-                    capucha.sID=document.documentID
-                    capucha.setMap(valores: document.data())
-                    self.arColumnas.append(capucha)
+                    let cosa:Cosas = Cosas()
+                    cosa.sID=document.documentID
+                    cosa.setMap(valores: document.data())
+                    self.arColumnas.append(cosa)
                     print("\(document.documentID) => \(document.data())")
                 }
                 print("----->>>> ",self.arColumnas.count)
-                delegate.DHDDescargaCapucha!(blnFin: true)
+                delegate.DHDDescargaCosa!(blnFin: true)
             }
         }
     }
@@ -138,5 +132,5 @@ class DataHolder: NSObject {
     @objc optional func dataHolderRegister(blfin:Bool)
     @objc optional func dataHolderLogin(blfin:Bool)
     @objc optional func imagen(imagen:UIImage)
-    @objc optional func DHDDescargaCOSAS(blnFin:Bool)
+    @objc optional func DHDDescargaCosa(blnFin:Bool)
 }

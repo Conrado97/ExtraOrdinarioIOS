@@ -8,7 +8,7 @@
 
 import UIKit
 
-class COSAS: NSObject {
+class Cosas: NSObject {
     let IDnombre = "nombre"
     let IDfoto = "foto"
     
