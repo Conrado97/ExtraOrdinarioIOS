@@ -36,6 +36,9 @@
                                 <rect key="frame" x="156" y="513" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Registrar"/>
+                                <connections>
+                                    <segue destination="2y3-cT-Tr2" kind="show" id="thI-tt-w82"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mk-OP-7EJ">
                                 <rect key="frame" x="160" y="563" width="54" height="30"/>
@@ -57,10 +60,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Registrar-->
         <scene sceneID="flH-UG-dpn">
             <objects>
-                <viewController id="2y3-cT-Tr2" sceneMemberID="viewController">
+                <viewController title="Registrar" id="2y3-cT-Tr2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmv-cH-yEI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +100,9 @@
                                 <rect key="frame" x="46" y="531" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YBo-HL-sQT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7h-KC-DS8">
                                 <rect key="frame" x="253" y="531" width="67" height="30"/>
@@ -110,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L05-T5-TOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="-665"/>
+            <point key="canvasLocation" x="670" y="-671"/>
         </scene>
     </scenes>
 </document>
