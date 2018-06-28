@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var EMail: UITextField?
+    @IBOutlet var Contraseña: UITextField?
+    @IBOutlet var Registrar: UIButton?
+    @IBOutlet var Continuar: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +24,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
